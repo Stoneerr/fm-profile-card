@@ -1,0 +1,129 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	--Pry-DkCyan: hsl(185, 75%, 39%);
+	--Pry-DkNSatBlue: hsl(229, 23%, 23%);
+	--Pry-GrayBlue: hsl(227, 10%, 46%);
+	--Neu-DkGray: hsl(0, 0%, 59%);
+	--Media-Mobile: 375px;
+	--Media-Desktop: 1440px;
+}
+
+/* --- Defaults --- */
+body {
+	font-family: "Kumbh Sans", sans-serif;
+	font-size: 18px;
+	background: var(--Pry-DkCyan);
+}
+
+h3 {
+	display: inline-block;
+	color: var(--Pry-DkNSatBlue);
+	font-weight: 700;
+}
+h5 {
+	margin-top: 0.8em;
+	display: inline-block;
+}
+h6 {
+	letter-spacing: 0.1em;
+	margin-top: 0.5em;
+}
+
+/* --- Section --- */
+.container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* --- MainCard --- */
+.card {
+	position: relative;
+	width: 21em;
+	background: white;
+	border-radius: 1em;
+	overflow: hidden;
+	text-align: center;
+	box-shadow: 0 0.6em 4.5em rgba(0, 0, 0, 0.15);
+}
+
+.card-bg {
+	background: var(--Pry-DkCyan);
+	height: 8.5em;
+}
+.personal-info {
+	position: relative;
+	background: white;
+	padding: 1.5em 0;
+}
+.profile-info {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0;
+	padding: 1.5em;
+}
+
+.profile-info::before {
+	position: absolute;
+	top: 0;
+	content: "";
+	display: block;
+	background: var(--Neu-DkGray);
+	height: 1px;
+	opacity: 0.5;
+	width: 100%;
+}
+
+/* --- Text --- */
+.gray {
+	color: var(--Neu-DkGray);
+	font-weight: 400;
+}
+#age {
+	color: var(--Pry-GrayBlue);
+}
+.name-age {
+	margin-top: 3em;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	gap: 0.625em;
+}
+
+/* --- Default Style (I will change this styles)--- */
+.attribution {
+	color: var(--Pry-DkNSatBlue);
+	position: absolute;
+	bottom: 10em;
+	font-size: 1em;
+	text-align: center;
+}
+.attribution a {
+	color: white;
+	text-decoration: none;
+}
+
+/* --- Images --- */
+.card > img {
+	position: absolute;
+	width: 6.25em;
+	border-radius: 50%;
+	border: 5px solid white;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+.card-bg > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.75;
+	filter: contrast(1.2);
+}
