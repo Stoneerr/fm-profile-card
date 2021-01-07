@@ -8,8 +8,6 @@
 	--Pry-DkNSatBlue: hsl(229, 23%, 23%);
 	--Pry-GrayBlue: hsl(227, 10%, 46%);
 	--Neu-DkGray: hsl(0, 0%, 59%);
-	--Media-Mobile: 375px;
-	--Media-Desktop: 1440px;
 }
 
 /* --- Defaults --- */
@@ -41,6 +39,8 @@ h6 {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	margin: 0 auto;
+	max-width: 85%;
 }
 
 /* --- MainCard --- */
@@ -113,13 +113,22 @@ h6 {
 }
 
 /* --- Images --- */
-.card > img {
+.card > .circle-img {
 	position: absolute;
+	left: 50%;
 	width: 6.25em;
+	height: 6.25em;
 	border-radius: 50%;
-	border: 0.32em solid white;
+	border: 5px solid white;
+	background: white;
 	transform: translate(-50%, -50%);
 	z-index: 1;
+	overflow: hidden;
+}
+.circle-img > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 .card-bg > img {
 	width: 100%;
@@ -138,4 +147,31 @@ h6 {
 .bg-bottom {
 	left: 50%;
 	top: 50%;
+}
+
+/* --- Media Query's --- */
+/* Mobile devices */
+@media (max-width: 375px) {
+	body {
+		font-size: 15px;
+	}
+	.attribution {
+		max-width: 85%;
+		bottom: 7%;
+		line-height: 1.5em;
+	}
+	.bg-top {
+		top: 0;
+		left: 0;
+		transform: translate(-55%, -50%) scale(0.5);
+		opacity: 0.5;
+	}
+	.bg-bottom {
+		left: 50%;
+		top: 50%;
+		width: 600px;
+	}
+	.personal-info > h5 {
+		font-size: 0.9em;
+	}
 }
