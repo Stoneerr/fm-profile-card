@@ -17,6 +17,7 @@ body {
 	font-family: "Kumbh Sans", sans-serif;
 	font-size: 18px;
 	background: var(--Pry-DkCyan);
+	overflow: hidden;
 }
 
 h3 {
@@ -50,7 +51,7 @@ h6 {
 	border-radius: 1em;
 	overflow: hidden;
 	text-align: center;
-	box-shadow: 0 0.6em 4.5em rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0.6em 4.5em rgba(0, 0, 0, 0.3);
 }
 
 .card-bg {
@@ -77,7 +78,7 @@ h6 {
 	display: block;
 	background: var(--Neu-DkGray);
 	height: 1px;
-	opacity: 0.5;
+	opacity: 0.25;
 	width: 100%;
 }
 
@@ -102,7 +103,7 @@ h6 {
 .attribution {
 	color: var(--Pry-DkNSatBlue);
 	position: absolute;
-	bottom: 10em;
+	bottom: 15%;
 	font-size: 1em;
 	text-align: center;
 }
@@ -116,7 +117,7 @@ h6 {
 	position: absolute;
 	width: 6.25em;
 	border-radius: 50%;
-	border: 5px solid white;
+	border: 0.32em solid white;
 	transform: translate(-50%, -50%);
 	z-index: 1;
 }
@@ -126,4 +127,15 @@ h6 {
 	object-fit: cover;
 	opacity: 0.75;
 	filter: contrast(1.2);
+}
+.pattern-bg > img {
+	position: absolute;
+}
+.bg-top {
+	bottom: 50%;
+	right: 50%;
+}
+.bg-bottom {
+	left: 50%;
+	top: 50%;
 }
